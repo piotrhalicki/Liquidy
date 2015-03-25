@@ -64,6 +64,54 @@ require_once 'connection.php';
 		</form>
 </fieldset>	
 
+<?php
+
+	if (var_dump($_POST) != null) {
+	var_dump($_POST);
+	echo '<br>';
+	var_dump($_POST['producent']);
+	echo '<br>';
+	var_dump($_POST['smak']);
+	echo '<br>';
+	var_dump($_POST['pojemnosc']);
+	echo '<br>';
+	var_dump($_POST['moc']);
+	echo '<br>';
+	var_dump($_POST['data']);
+	echo '<br>';
+	var_dump($_POST['opinia']);
+	echo '<br>';
+	};
+
+
+	
+if($_SERVER['REQUEST_METHOD'] === 'POST'){
+			$sql = "INSERT INTO Producent (name) VALUES ('trim(".$_POST['producent'].")'";
+
+			$sql = "INSERT INTO Smak (name) VALUES ('trim(".$_POST['smak'].")'";
+
+			$sql = "INSERT INTO Pojemnosc (ml) VALUES ('".$_POST['pojemnosc']."')";
+
+			$sql = "INSERT INTO Moc (mg) VALUES ('".$_POST['moc']."')";
+
+			$sql = "INSERT INTO Termin_waznosci (data) VALUES ('".$_POST['data']."')";
+
+			$sql = "INSERT INTO Opinia (opinia) VALUES ('".$_POST['opinia']."')";
+
+	}
+	
+	if ($conn->query($sql) === TRUE) {
+		echo "Nowy wpis został dodany do bazy :)";
+	} 
+	else {
+		echo "Coś poszło nie tak: " .$sql. " - " .$conn->error;
+	};
+
+
+$conn->close(); // zamykanie tabeli ZAWSZE na końcu - to logiczne!
+$conn = null; 	// zamykanie tabeli ZAWSZE na końcu - to logiczne!
+
+?>
 
 </body>
 </html>

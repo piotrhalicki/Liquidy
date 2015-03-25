@@ -12,14 +12,6 @@
 </head>
 
 <body>
-
-	<h1>
-	<strong><em>Baza liquidów</em></strong>
-	</h1>
-	
-	<br>
-<hr>
-	<br>
 	
 <?php
 
