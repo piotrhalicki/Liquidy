@@ -1,3 +1,26 @@
+<!DOCTYPE html>
+
+<html lang="pl-PL">
+<meta charset="UTF-8">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="Baza Liquidów" content="ćwiczenia, mySQL, baza liqidów">	
+	<title>						
+	Baza liquidów
+	</title>
+</head>
+
+<body>
+
+	<h1>
+	<strong><em>Baza liquidów</em></strong>
+	</h1>
+	
+	<br>
+<hr>
+	<br>
+	
 <?php
 
 	$servername = "localhost";
@@ -17,3 +40,7 @@
 			};
 
 ?>
+
+
+</body>
+</html>

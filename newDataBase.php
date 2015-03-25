@@ -1,8 +1,25 @@
+<!DOCTYPE html>
+
+<html lang="pl-PL">
+<meta charset="UTF-8">
+
+<head>
 	<meta charset="UTF-8">
-	<meta name="Ćwiczenia - mySQL - Kino - 3" content="ćwiczenia, mySQL, kino">	
+	<meta name="Baza Liquidów" content="ćwiczenia, mySQL, baza liqidów">	
 	<title>						
-	Ćwiczenia - mySQL - Kino - 3
+	Baza liquidów
 	</title>
+</head>
+
+<body>
+
+	<h1>
+	<strong><em>Baza liquidów</em></strong>
+	</h1>
+	
+	<br>
+<hr>
+	<br>
 
 <?php
 
@@ -14,9 +31,10 @@ $password = "cwiczenia";
 $conn = new mysqli($servername, $username, $password);
 if ($conn->connect_error) {
 	die("Połączenie nieudane. Błąd: " . $conn->connect_error);
+	echo '<br>'; // to chyba nie zostanie wyświetlone...
 }
 else {
-	echo "Połączenie nawiązane :)", '<br>', '<br>';
+	echo '<p>', "Połączenie nawiązane :)", '</p>';
 };
 
 $conn -> query ('CREATE database liquidy');
@@ -26,9 +44,9 @@ $baseName = "liquidy";
 
 $sql = "CREATE DATABASE liquidy";
 if ($conn->query($sql) === TRUE) {
-	echo "Baza danych " .$baseName. "utworzona :)";
+	echo "Baza danych " .$baseName. "utworzona :)", '<br>';
 } else {
-	echo "Coś poszło nie tak podczas tworzenia bazy :(" . $conn->error;
+	echo '<p>', "Coś poszło nie tak podczas tworzenia bazy :( ", '<br>' .$conn->error, '</p>';
 };
 
 $conn -> query ('SET NAMES utf8');
@@ -37,9 +55,17 @@ $conn -> query ('SET NAMES utf8');
 $conn = new mysqli($servername, $username, $password, $baseName);
 if ($conn->connect_error) {
 	die("Połączenie nieudane. Błąd: " . $conn->connect_error);
+	echo '<br>'; // to chyba nie zostanie wyświetlone...
 }
 else {
-	echo "Połączenie z bazą ", '<strong>', $baseName, '</strong>', " udane :)", '<br>', '<br>';
+	echo '<p>', "Połączenie z bazą ", '<strong>', $baseName, '</strong>', " udane :)", '</p>';
 };
 
 ?>
+	
+	<br>
+<hr>
+	<br>
+	
+	</body>
+	</html>
