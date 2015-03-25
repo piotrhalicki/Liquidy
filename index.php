@@ -5,18 +5,35 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="Ćwiczenia - mySQL - Kino - 3" content="ćwiczenia, mySQL, kino">	
+	<meta name="Baza Liquidów" content="ćwiczenia, mySQL, baza liqidów">	
 	<title>						
-	Ćwiczenia - mySQL - Kino - 3
+	Baza liquidów
 	</title>
 </head>
 
-
-
 <body>
 
-<a href="newDataBase.php">Stwórz bazę danych liquidy</a>
+	<h1>
+	<strong><em>Baza liquidów</em></strong>
+	</h1>
+	
+	<br>
+<hr>
+	<br>
+
+<?php
+
+require_once 'connection.php';
+
+?>
+
+	<br>
+<hr>
+	<br>
+
+<p>Jeśli powyższy komunikat wskazuje błąd, być może należy utworzyć bazę danych, aby to zrobić kliknij: 	
+<a href="newDataBase.php">Stwórz bazę danych "liquidy"</a></p>
 
 
-
+</body>
 </html>
